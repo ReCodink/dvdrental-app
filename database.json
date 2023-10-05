@@ -1,0 +1,8 @@
+{
+    "driver": "pg",
+    "username": "recodink",
+    "host": "localhost",
+    "database": "dvdrental",
+    "password": "16072001",
+    "port": 5432
+}
