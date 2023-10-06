@@ -4,14 +4,8 @@ import { getAllFilmsQuery, getFilmByIdQuery } from '../query.mjs';
 
 const router = express.Router();
 
-// Middleware untuk mendapatkan koneksi database dari pool
-const connectDatabase = (pool) => (req, res, next) => {
-    req.db = pool;
-    next();
-};
-
 // Routes untuk menampilkan data seluruh list film
-router.get('/films', connectDatabase, async (req, res) => {
+router.get('/films', async (req, res) => {
     const pool = req.db;
     try {
         // Menggunakan query untuk seluruh list daftar film
@@ -26,7 +20,7 @@ router.get('/films', connectDatabase, async (req, res) => {
 });
 
 // Routes untuk menampilkan data film tertentu berdasarkan ID
-router.get('/films/:id', connectDatabase, async (req, res) => {
+router.get('/films/:id', async (req, res) => {
     const pool = req.db;
     const filmId = req.params.id; // Gunakan req.params untuk mendapatkan nilai ID
     try {
