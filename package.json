@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "seedActor": "node actor.mjs",
     "start": "node index.mjs",
