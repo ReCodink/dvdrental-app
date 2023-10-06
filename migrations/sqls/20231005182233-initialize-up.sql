@@ -1,2 +1,2 @@
 /* Replace with your SQL commands */
-ALTER TABLE 
+ALTER TABLE actor ADD COLUMN age INTEGER;
