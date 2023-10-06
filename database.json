@@ -1,8 +1,16 @@
 {
-    "driver": "pg",
     "username": "recodink",
     "host": "localhost",
     "database": "dvdrental",
-    "password": "16072001",
-    "port": 5432
+    "password": "raihan",
+    "port": 5432,
+
+    "dev": {
+        "driver": "pg",
+        "username": "recodink",
+        "host": "localhost",
+        "database": "dvdrental",
+        "password": "raihan",
+        "port": 5432
+    }
 }
