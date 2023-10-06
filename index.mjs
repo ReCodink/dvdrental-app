@@ -3,6 +3,7 @@ import pkg from 'pg';
 import { readFile } from 'fs/promises';
 import filmsRouter from './routes/films.mjs';
 import categoriesRouter from './routes/categories.mjs';
+import filmCategoriesRouter from './routes/film-categories.mjs';
 
 const { Pool } = pkg;
 const app = express();
@@ -41,6 +42,9 @@ const startServer = async () => {
 
         // Menggunakan rute categoriesRouter untuk rute terkait kategori
         app.use('/api', categoriesRouter);
+
+        // Menggunakan rute filmCategoriesRouter untuk rute terkait film-kategori
+        app.use('/api', filmCategoriesRouter);
 
         // Menjalankan server pada port yang telah ditentukan
         app.listen(port, () => {
